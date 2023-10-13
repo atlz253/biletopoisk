@@ -1,0 +1,9 @@
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.count {
+    font-weight: 600;
+}

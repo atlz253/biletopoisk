@@ -1,0 +1,11 @@
+.footer {
+    background-color: var(--gray-1);
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    color: #fff;
+    line-height: 38px;
+}

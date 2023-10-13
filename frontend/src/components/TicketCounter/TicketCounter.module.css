@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.marginLeft {
+    margin-left: 8px;
+}
+
+.count {
+    font-size: 20px;
+    font-weight: 600;
+}

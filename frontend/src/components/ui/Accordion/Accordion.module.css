@@ -1,0 +1,23 @@
+.title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.group {
+    margin-top: 16px;
+}
+
+.group:first-child {
+    margin-top: 0;
+}
+
+.titleGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}

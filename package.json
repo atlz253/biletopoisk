@@ -1,0 +1,11 @@
+{
+  "name": "biletopoisk",
+  "version": "1.0.0",
+  "scripts": {
+    "back:init": "cd backend && npm ci",
+    "back:dev": "cd backend && npm start",
+    "front:init": "cd frontend && npm ci",
+    "front:dev": "cd frontend && npm run dev"
+  },
+  "author": "Fedor Alekseev"
+}

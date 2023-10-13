@@ -1,0 +1,13 @@
+.feedback {
+    display: flex;
+    margin-top: 24px;
+}
+
+.feedback:first-child {
+    margin-top: 0;
+}
+
+.titleGroup {
+    display: flex;
+    justify-content: space-between;
+}

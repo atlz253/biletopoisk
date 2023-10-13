@@ -1,0 +1,10 @@
+.placeholder {
+    background-color: var(--gray-5);
+    min-width: 100px;
+    min-height: 100px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
