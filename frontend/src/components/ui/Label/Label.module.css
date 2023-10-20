@@ -1,10 +1,11 @@
 .label {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
-    color: var(--text-primary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
-.label + input, .label + div>select {
-    margin-top: 4px;
+.label + input,
+.label + div > select {
+  margin-top: 4px;
 }

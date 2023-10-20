@@ -10,30 +10,36 @@ import { searchFilterActions } from "@/redux/features/searchFilter";
 import { useRouter } from "next/navigation";
 
 interface CinemaSelectProps {
-    className?: string,
-    options: Option[]
+  className?: string;
+  options: Option[];
 }
 
-export const CinemaSelect: FunctionComponent<CinemaSelectProps> = ({ className, options }): ReactNode => {
-    const cinemaId = useSelector(selectCinemaId);
-    const dispatch = useAppDispatch();
-    const router = useRouter();
+export const CinemaSelect: FunctionComponent<CinemaSelectProps> = ({
+  className,
+  options,
+}): ReactNode => {
+  const cinemaId = useSelector(selectCinemaId);
+  const dispatch = useAppDispatch();
+  const router = useRouter();
 
-    const setValue = (value: string) => {
-        dispatch(searchFilterActions.setCinema(value))
+  const setValue = (value: string) => {
+    dispatch(searchFilterActions.setCinema(value));
 
-        router.push("http://localhost:3000" + (value === "placeholder" ? "" : `?cinemaId=${value}`));
-    };
+    router.push(
+      "http://localhost:3000" +
+        (value === "placeholder" ? "" : `?cinemaId=${value}`),
+    );
+  };
 
-    return (
-        <div className={className}>
-            <Label>Кинотеатр</Label>
-            <Select
-                placeholder="Выберите кинотеатр"
-                options={options}
-                value={cinemaId}
-                setValue={setValue}
-            />
-        </div>
-    )
+  return (
+    <div className={className}>
+      <Label>Кинотеатр</Label>
+      <Select
+        placeholder="Выберите кинотеатр"
+        options={options}
+        value={cinemaId}
+        setValue={setValue}
+      />
+    </div>
+  );
 };

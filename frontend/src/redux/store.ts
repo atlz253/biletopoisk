@@ -5,13 +5,14 @@ import { searchFilterReducer } from "./features/searchFilter";
 import { cartReducer } from "./features/cart";
 
 export const store = configureStore({
-    reducer: {
-        [movieApi.reducerPath]: movieApi.reducer,
-        searchFilter: searchFilterReducer,
-        cart: cartReducer
-    },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(movieApi.middleware),
-    devTools: process.env.NODE_ENV !== "production"
+  reducer: {
+    [movieApi.reducerPath]: movieApi.reducer,
+    searchFilter: searchFilterReducer,
+    cart: cartReducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(movieApi.middleware),
+  devTools: process.env.NODE_ENV !== "production",
 });
 
 export type RootState = ReturnType<typeof store.getState>;

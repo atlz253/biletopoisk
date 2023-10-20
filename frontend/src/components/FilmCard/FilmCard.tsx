@@ -4,11 +4,11 @@ import { FunctionComponent } from "react";
 import { FilmCardBig } from "./FilmCardBig";
 
 export interface FilmCardProps {
-    film: Film,
-    removable?: boolean
+  film: Film;
+  removable?: boolean;
 }
 
 export const FilmCard: { [key in string]: FunctionComponent<FilmCardProps> } = {
-    Small: FilmCardSmall,
-    Big: FilmCardBig
+  Small: FilmCardSmall,
+  Big: FilmCardBig,
 };

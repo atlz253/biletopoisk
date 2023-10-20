@@ -9,21 +9,25 @@ import { useAppDispatch } from "@/redux/store";
 import { useSelector } from "react-redux";
 
 interface FilmTitleInputProps {
-    className?: string
+  className?: string;
 }
 
-export const FilmTitleInput: FunctionComponent<FilmTitleInputProps> = ({ className }): ReactNode => {
-    const title = useSelector(selectTitle);
-    const dispatch = useAppDispatch();
+export const FilmTitleInput: FunctionComponent<FilmTitleInputProps> = ({
+  className,
+}): ReactNode => {
+  const title = useSelector(selectTitle);
+  const dispatch = useAppDispatch();
 
-    return (
-        <div className={className}>
-            <Label>Название</Label>
-            <Input
-                placeholder="Введите название"
-                value={title}
-                setValue={(value: string) => dispatch(searchFilterActions.setTitle(value))}
-            />
-        </div>
-    );
+  return (
+    <div className={className}>
+      <Label>Название</Label>
+      <Input
+        placeholder="Введите название"
+        value={title}
+        setValue={(value: string) =>
+          dispatch(searchFilterActions.setTitle(value))
+        }
+      />
+    </div>
+  );
 };

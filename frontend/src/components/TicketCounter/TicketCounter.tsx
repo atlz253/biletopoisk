@@ -14,58 +14,53 @@ import { DeleteTicketModal } from "../DeleteTicketModal/DeleteTicketModal";
 import { Film } from "@/redux/services/movieAPI";
 
 interface TicketCounterProps {
-    film: Film,
-    approveLastTicket?: boolean
+  film: Film;
+  approveLastTicket?: boolean;
 }
 
-export const TicketCounter: FunctionComponent<TicketCounterProps> = ({ film, approveLastTicket }): ReactNode => {
-    const count = useSelector((state: RootState) => selectTicketCount(state, film.id));
-    const dispatch = useAppDispatch();
-    const { isModalOpen, openModal, closeModal } = useModal();
+export const TicketCounter: FunctionComponent<TicketCounterProps> = ({
+  film,
+  approveLastTicket,
+}): ReactNode => {
+  const count = useSelector((state: RootState) =>
+    selectTicketCount(state, film.id),
+  );
+  const dispatch = useAppDispatch();
+  const { isModalOpen, openModal, closeModal } = useModal();
 
-    const onMinusClick = () => {
-        if (approveLastTicket && count === 1) {
-            openModal();
+  const onMinusClick = () => {
+    if (approveLastTicket && count === 1) {
+      openModal();
 
-            return;
-        }
-
-        dispatch(cartActions.removeTicket(film));
+      return;
     }
 
-    return (
-        <>
-            <div className={styles.container}>
-                <Button.Small
-                    onClick={onMinusClick}
-                    disabled={count === 0}
-                >
-                    <Icon.Minus
-                        height={10}
-                        width={10}
-                    />
-                </Button.Small>
-                <div className={classNames(styles.marginLeft, styles.count)}>
-                    {count}
-                </div>
-                <Button.Small
-                    className={styles.marginLeft}
-                    onClick={() => dispatch(cartActions.addTicket(film))}
-                    disabled={count === 30}
-                >
-                    <Icon.Plus
-                        height={10}
-                        width={10}
-                    />
-                </Button.Small>
-            </div>
-            {
-                isModalOpen &&
-                <DeleteTicketModal
-                    close={closeModal}
-                    onApprove={() => dispatch(cartActions.removeTicket(film))}
-                />
-            }
-        </>
-    )
+    dispatch(cartActions.removeTicket(film));
+  };
+
+  return (
+    <>
+      <div className={styles.container}>
+        <Button.Small onClick={onMinusClick} disabled={count === 0}>
+          <Icon.Minus height={10} width={10} />
+        </Button.Small>
+        <div className={classNames(styles.marginLeft, styles.count)}>
+          {count}
+        </div>
+        <Button.Small
+          className={styles.marginLeft}
+          onClick={() => dispatch(cartActions.addTicket(film))}
+          disabled={count === 30}
+        >
+          <Icon.Plus height={10} width={10} />
+        </Button.Small>
+      </div>
+      {isModalOpen && (
+        <DeleteTicketModal
+          close={closeModal}
+          onApprove={() => dispatch(cartActions.removeTicket(film))}
+        />
+      )}
+    </>
+  );
 };

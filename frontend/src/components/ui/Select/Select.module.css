@@ -1,19 +1,19 @@
 .wrapper {
-    position: relative;
+  position: relative;
 }
 
 .placeholder {
-    color: var(--text-tertiary);
+  color: var(--text-tertiary);
 }
 
 .arrow {
-    position: absolute;
-    right: 16px;
-    top: 15px;
-    cursor: pointer;
-    pointer-events: none;
+  position: absolute;
+  right: 16px;
+  top: 15px;
+  cursor: pointer;
+  pointer-events: none;
 }
 
 .rotate {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }

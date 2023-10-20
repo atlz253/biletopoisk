@@ -1,31 +1,31 @@
 .film {
-    display: flex;
+  display: flex;
 }
 
 .wrapper {
-    width: 100%;
+  width: 100%;
 }
 
 .titleGroup {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .detail {
-    margin-top: 16px;
-    font-weight: 500;
+  margin-top: 16px;
+  font-weight: 500;
 }
 
 .detail:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .posterWrapper {
-    width: 400px;
-    height: 500px;
+  width: 400px;
+  height: 500px;
 }
 
 .poster {
-    object-fit: cover;
+  object-fit: cover;
 }

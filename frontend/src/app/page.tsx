@@ -5,7 +5,11 @@ import { fetchFilms } from "@/fetches/fetchFilms";
 import classNames from "classnames";
 import { StoreProvider } from "@/redux/StoreProvider";
 
-const HomePage = async ({ searchParams }: { searchParams: { cinemaId?: string } }) => {
+const HomePage = async ({
+  searchParams,
+}: {
+  searchParams: { cinemaId?: string };
+}) => {
   const films = await fetchFilms(searchParams.cinemaId);
 
   return (
@@ -17,7 +21,7 @@ const HomePage = async ({ searchParams }: { searchParams: { cinemaId?: string } 
         </main>
       </StoreProvider>
     </div>
-  )
+  );
 };
 
 export default HomePage;

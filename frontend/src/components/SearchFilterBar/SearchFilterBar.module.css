@@ -1,6 +1,6 @@
 .bar {
-    /* Высота страницы - высота шапки - высота внутренних отступов - высота подвала */
-    height: calc(100vh - var(--header-height) - 24px * 2 - var(--footer-height));
-    position: sticky;
-    top: calc(var(--header-height) + 24px); /* высота шапки + верхний отступ */
+  /* Высота страницы - высота шапки - высота внутренних отступов - высота подвала */
+  height: calc(100vh - var(--header-height) - 24px * 2 - var(--footer-height));
+  position: sticky;
+  top: calc(var(--header-height) + 24px); /* высота шапки + верхний отступ */
 }

@@ -1,37 +1,37 @@
 .card {
-    display: flex;
-    margin-top: 16px;
+  display: flex;
+  margin-top: 16px;
 }
 
 .card:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .content {
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .title {
-    line-height: 0.9;
+  line-height: 0.9;
 }
 
 .genre {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .group {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .posterWrapper {
-    width: 100px;
-    height: 120px;
+  width: 100px;
+  height: 120px;
 }
 
 .poster {
-    object-fit: cover;
+  object-fit: cover;
 }

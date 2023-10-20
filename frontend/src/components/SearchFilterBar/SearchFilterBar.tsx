@@ -11,19 +11,25 @@ import { CinemaSelect } from "../CinemaSelect";
 import { fetchCinemas } from "@/fetches/fetchCinemas";
 
 export const SearchFilterBar: FunctionComponent = async () => {
-    const genres = await fetchGenres();
-    const cinemas = await fetchCinemas();
+  const genres = await fetchGenres();
+  const cinemas = await fetchCinemas();
 
-    const genresSelectOptions = genres.map(genre => ({ value: genre, text: sentenceCase(translate(genre, "ru")) }));
+  const genresSelectOptions = genres.map((genre) => ({
+    value: genre,
+    text: sentenceCase(translate(genre, "ru")),
+  }));
 
-    const cinemasSelectOptions = cinemas.map(cinema => ({ value: cinema.id, text: cinema.name }));
+  const cinemasSelectOptions = cinemas.map((cinema) => ({
+    value: cinema.id,
+    text: cinema.name,
+  }));
 
-    return (
-        <Card className={classNames("padding-md", styles.bar)}>
-            <h4 className="white-space-nowrap">Фильтр поиска</h4>
-            <FilmTitleInput className="margin-top" />
-            <GenreSelect className="margin-top" options={genresSelectOptions} />
-            <CinemaSelect className="margin-top" options={cinemasSelectOptions} />
-        </Card>
-    )
+  return (
+    <Card className={classNames("padding-md", styles.bar)}>
+      <h4 className="white-space-nowrap">Фильтр поиска</h4>
+      <FilmTitleInput className="margin-top" />
+      <GenreSelect className="margin-top" options={genresSelectOptions} />
+      <CinemaSelect className="margin-top" options={cinemasSelectOptions} />
+    </Card>
+  );
 };
