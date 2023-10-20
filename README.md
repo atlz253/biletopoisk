@@ -2,6 +2,8 @@
 
 The project was made at the Yandex interface development school
 
+![screenshot](./screenshots/1.png)
+
 ## Development
 
 1. install npm dependencies
