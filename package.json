@@ -5,7 +5,16 @@
     "back:init": "cd backend && npm ci",
     "back:dev": "cd backend && npm start",
     "front:init": "cd frontend && npm ci",
-    "front:dev": "cd frontend && npm run dev"
+    "front:dev": "cd frontend && npm run dev",
+    "prepare": "husky install"
   },
-  "author": "Fedor Alekseev"
+  "author": "Fedor Alekseev",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "prettier": "3.0.3"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
 }

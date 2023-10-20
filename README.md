@@ -7,6 +7,7 @@ The project was made at the Yandex interface development school
 1. install npm dependencies
 
 ```
+npm ci
 npm run back:init
 npm run front:init
 ```
