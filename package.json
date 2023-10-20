@@ -2,17 +2,33 @@
   "name": "biletopoisk",
   "version": "1.0.0",
   "scripts": {
-    "back:init": "cd backend && npm ci",
-    "back:dev": "cd backend && npm start",
-    "front:init": "cd frontend && npm ci",
-    "front:dev": "cd frontend && npm run dev",
+    "back:dev": "cd backend && supervisor server.js",
+    "front:dev": "cd frontend && next dev",
+    "front:build": "cd frontend && next build",
+    "front:start": "cd frontend && next start",
+    "front:lint": "next lint",
     "prepare": "husky install"
   },
   "author": "Fedor Alekseev",
-  "devDependencies": {
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.13",
+    "@types/react-dom": "18.2.6",
+    "classnames": "^2.3.2",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.6",
+    "next": "13.4.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.1.1",
+    "typescript": "5.1.3",
+    "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
-    "prettier": "3.0.3"
+    "prettier": "3.0.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
